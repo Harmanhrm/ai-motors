@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 100%;
+    
+  }
+  
+  .form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 10px; /* Reduced gap */
+    width: 100%;
+    max-width: 1200px;
+    
+  }
+  
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+  }
+  
+  .vertical-line {
+    background-color: #ccc;
+    width: 1px;
+    height: auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8em;
+  }
+  
+  .submit-btn {
+    grid-column: 1 / -1; /* Span all columns */
+    width: 100%; /* Full container width */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: #fff;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Popup styles */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-inner {
+    border-radius: 12px;
+    position: relative;
+    padding: 32px;
+    width: 70%;
+    max-width: 640px;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .close-btn1 {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: aquamarine;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    padding: 4px 13px;
+  }
+  
